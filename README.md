@@ -1,5 +1,137 @@
-# Vue 3 + Vite
+Parfait, voici un **README.md synthétique et structuré** qui résume tout ce que tu as fait jusqu'ici, y compris les problèmes rencontrés (notamment sur Tailwind CSS), rédigé dans un format propre et professionnel :
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+---
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+````md
+# Karibu UGE – Site vitrine (1ʳᵉ tentative avec Vue.js)
+
+Ce projet visait à créer une première version du site web vitrine de l'association **Karibu UGE**, dans le cadre de l’apprentissage du développement frontend avec **Vue.js** et **Tailwind CSS**.
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **Vite** (initialisation rapide du projet)
+- **Vue 3** (composition API, SPA)
+- **Vue Router** (navigation entre les pages)
+- **Tailwind CSS** (design utilitaire)
+- **PostCSS & Autoprefixer** (transformation CSS)
+- **Git & GitHub** (versionnement)
+
+---
+
+## ✅ Étapes réalisées
+
+### 1. Initialisation du projet
+```bash
+npm create vite@latest karibu-uge -- --template vue
+npm install
+````
+
+Création d’une structure propre :
+
+```
+src/
+├── assets/
+├── components/
+├── pages/
+├── router/
+```
+
+### 2. Configuration de Tailwind CSS
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Ajout du contenu dans `tailwind.config.js` :
+
+```js
+export default {
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  theme: { extend: {} },
+  plugins: [],
+}
+```
+
+Ajout du fichier `src/assets/main.css` :
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Import du fichier CSS dans `main.js` :
+
+```js
+import './assets/main.css'
+```
+
+### 3. Mise en place du routage
+
+* Création de `router/index.js`
+* Configuration de la route `/` vers `Home.vue`
+* Intégration dans `main.js` via `.use(router)`
+
+### 4. Création des premiers composants
+
+* `Home.vue` avec un titre et un paragraphe
+* Début de `App.vue` structuré avec `<router-view />`
+
+---
+
+## ❗ Problèmes rencontrés
+
+### ❌ Problème majeur : Tailwind CSS non pris en compte
+
+Malgré une installation correcte, le style par défaut de Vite persistait (police, couleurs de fond, etc.).
+
+#### 🛠️ Débogage effectué :
+
+* Suppression du fichier `style.css` par défaut
+* Création manuelle du fichier `main.css` dans `src/assets/`
+* Vérification du contenu `tailwind.config.js` et `postcss.config.js`
+* Nettoyage du cache Vite (`rm -rf node_modules/.vite`)
+* Redémarrage avec `npm run dev`
+
+Finalement, c’est l’utilisation explicite de :
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+… à la place de `@import "tailwindcss";` qui a débloqué l’affichage des styles.
+
+---
+
+## 📌 Bilan
+
+Le projet a permis :
+
+* Une bonne familiarisation avec l’écosystème Vue + Tailwind
+* La structuration propre d’un projet SPA
+* L’apprentissage des bonnes pratiques de configuration
+
+### 🔁 Prochaine étape :
+
+Refonder le projet à partir de zéro, potentiellement avec **React**.
+
+---
+
+## 💡 À venir (dans le prochain projet)
+
+* Meilleure intégration visuelle dès le départ
+* Création de tous les composants (Header, Footer, Cards…)
+* Mise en place des pages complètes : Présentation, Actions, Équipe, Contact
+* Déploiement final sur le domaine : [assokaribu.com](https://assokaribu.com)
+
+```
+
+---
+
+Souhaites-tu que je t’aide à [initialiser ton nouveau projet React + Tailwind dès maintenant](f) ou à [générer automatiquement ce README dans un nouveau dépôt GitHub](f) ?
+```
