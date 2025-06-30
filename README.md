@@ -1,7 +1,3 @@
-Parfait, voici un **README.md synthétique et structuré** qui résume tout ce que tu as fait jusqu'ici, y compris les problèmes rencontrés (notamment sur Tailwind CSS), rédigé dans un format propre et professionnel :
-
----
-
 ````md
 # Karibu UGE – Site vitrine (1ʳᵉ tentative avec Vue.js)
 
@@ -96,7 +92,7 @@ Malgré une installation correcte, le style par défaut de Vite persistait (poli
 * Nettoyage du cache Vite (`rm -rf node_modules/.vite`)
 * Redémarrage avec `npm run dev`
 
-Finalement, c’est l’utilisation explicite de :
+Finalement, même l’utilisation explicite de :
 
 ```css
 @tailwind base;
@@ -104,7 +100,7 @@ Finalement, c’est l’utilisation explicite de :
 @tailwind utilities;
 ```
 
-… à la place de `@import "tailwindcss";` qui a débloqué l’affichage des styles.
+… à la place de `@import "tailwindcss";` semble ne pas fonctionner.
 
 ---
 
