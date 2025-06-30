@@ -128,10 +128,3 @@ Refonder le projet à partir de zéro, potentiellement avec **React**.
 * Création de tous les composants (Header, Footer, Cards…)
 * Mise en place des pages complètes : Présentation, Actions, Équipe, Contact
 * Déploiement final sur le domaine : [assokaribu.com](https://assokaribu.com)
-
-```
-
----
-
-Souhaites-tu que je t’aide à [initialiser ton nouveau projet React + Tailwind dès maintenant](f) ou à [générer automatiquement ce README dans un nouveau dépôt GitHub](f) ?
-```
